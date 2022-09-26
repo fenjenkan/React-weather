@@ -1,0 +1,21 @@
+<div>{location.name}</div>
+        <div><h1>{parseInt((location.main.temp)-273.15)} C°</h1></div>
+        <div> {location.weather[0].main}</div>
+        <div>{location.main.humidity} %</div>
+        <div>{location.wind.speed} m/s </div>
+
+<Link to={`/clima/${user.id}/${user.ciudad}`}>
+                  <h3>{user.user}</h3>
+                </Link>
+                <p>{user.lat}</p>
+                <p>{user.lon}</p>
+                <button onClick={() => handleDelete(user.id)}>Delete</button>
+                <Link to={`/edit/${user.id}`}>edit</Link>
+
+
+
+<div>{location.name}</div>
+        <div><h1>{parseInt((location.main.temp)-273.15)} C°</h1></div>
+        <div> {location.weather[0].main}</div>
+        <div>{location.main.humidity} %</div>
+        <div>{location.wind.speed} m/s </div>
