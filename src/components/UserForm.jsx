@@ -22,15 +22,6 @@ const styles = createTheme({
   }
 });
 const UserForm = () => {
-  function componentDidMount() {
-    setTimeout(
-      function () {
-        //Start the timer
-        this.setState({ render: true }); //After 1 second, set render to true
-      }.bind(this),
-      2000
-    );
-  }
 
   const [user, setUser] = useState({
     user: "",
@@ -54,7 +45,7 @@ const UserForm = () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
     const response = await axios.get(url);
     console.log(response.data.coord.lat);
-    componentDidMount();
+    
     if (params.id) {
       dispatch(
         updateUser({
